@@ -6,7 +6,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (kill(atoi(argv[1]), 0)== -1){
+    if (kill(atoi(argv[1]), 0) == -1){
         if(errno == EPERM){
             printf ("Process %s exists but we have no permission\n", argv[1]);
             return 0;

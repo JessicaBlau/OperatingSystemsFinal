@@ -1,64 +1,25 @@
 # OperatingSystemsFinal
-.(13/08/2020 , סמסטר ב' )הגשה עד 2020  מערכות הפעלה ​: עבודת מסכמת
-  2 : גרסא 15/07/2020 : תאריך עדכון
- 
-הוראות חשובות לגבי כל תרגילי התכנות במטלה זו: .ך 1   אי README שגיאות קומפילציה יגררו ציון אפס על השאלה המתאימה. הסבירו במדויק בקובץ לקמפל ולהריץ את הקוד שלכם. .ו 2 . כל שאלה ופתרונה יהי fwork_<your_id > כל הקבצים שאתם מגישים צריכים להיות בתוך ספריה בשם q_<number > בספריה נפרדת בשם .3. ( ינתן בהמשך zoom)" מידע נוסף לגבי הבחינה "הפרונטאלית .ת 4 נא להקפיד על כל הוראות ההגשה המפורטות במסמך. על מנת שניתן יהיה לבדוק את העבודות ביסודיו ובזריזות נדרש שיתוף הפעולה מצדכם. .5.  Ubuntu  של ​ סביבה הווירטואלית ​ אנו ממליצים לבצע את המטלה ב .6! ביצוע המטלה אישי בלבד 
-  .C : מבנה הזכרון של תוכנית בשפת ​(' נק 25) 1 שאלה  וכו'. נתונה text​,​ stack ,heap  הכולל את הקטעים C  בשאלה זו תתנסו במבנה הזכרון  של תוכנית בשפת (. למטרה זו באפשרותכם להשתמש comments) . עליכם לענות על כל השאלות בהערות program התוכנית .( )למדו איך להשתמש בהם ​ objdump​, ​nm​, ​size : בכלים הבאים
- מה עליכם לבצע:  . או מקורות אחרים לפי בחירתכם ​ man ​- השתמשו ב ​ .objdump​, ​nm​, ​size - (   למדו איך להשתמש ב 0      עליכם להכיר את הכלים האלה לפחות ברמה שתאפשר לכם לבצע את המטלה. (ת 1 התכני ​ ( שיש בה שאלה בתשובה, בתשובה של שורה אחת בתוך comment) החליפו כל הערה . .כל השאלות ממוספרות. שמרו על אותו מספור בתשובות שלכם ​ המקורית (2(  נפרד, שבו תסבירו כל אחת מתשובותיכם. כמו כן הוסיפו פלט של הכלים)הנ"ל pdf יש ליצור קובץ שהשתמשתם בהם, שמאשר את התשובה שלכם. יש להשתמש באותו מספור. לצורך נוחות הבדיקה,  .​ תוכנית המקורית ​ אנא העתיקו לפני כל תשובה את השאלה המקורית + שורת הקוד המתאימה מה
- מה עליכם להגיש: .1q 1_<your_id>.c  שנקראת 1  עם תשובות של שורה אחת מסעיף C תכנית .2q 1_<your_id>.pdf  ששמו 2  מסעיף pdf קובץ
- 
-חשוב: אם אחד הקבצים חסר, הציון על כל השאלה יהיה אפס. הסבר חסר על שאלה מסויימת בקובץ המקור או בקובץ  !  הנוסף - הציון יהיה אפס. היזהרו, לא יתקבל כל חומר משלים לאחר מועד ההגשה pdf -ה
- 
- :(zoom) " מה צריך לדעת לקראת הבחינה "הפרונטאלית (, אתם עשויים להשאל שאלות שונות על הנושא של המטלה. כמו memory layout) יש להבין את מבנה הזכרון כן, יתכן שתתבקשו להריץ ולהשתמש בכלים )הנ"ל( שהשתמשתם לצורך המטלה. לדוגמא - איך המחסנית ממומשת, מתי עדיף להשתמש במחסנית עבור הקצאת זכרון ומתי בערימה, וכד'. 
+Question 1: There is a given program in C. Find where all marked lines are allocated in the memory using 
+objdump, nm, and size.
+  - In the program itself next to a line there is a comment with where it is allocated.
+  - In the pdf file screenshots of how I found where each is allocated and explanation.
 
- 
- signals :(' נק 25) 2 שאלה
- 
-  מסויים. דרך אחת היא להשתמש pid ( עם process) המשימה שלכם היא לבדוק האם קיים תהליך  נכשלת 0 נתון ואפשר להשתמש בו. אם שליחת סיגנל ​ (zero signal) 0 ​ כאשר סיגנל ​ ​ ,kill(<pid>, 0 ​)​ בשליחת EPERM אנחנו יודעים שהתהליך אינו קיים. אם הקריאה נכשלה עם הודעת שגיאה ​ ,ESRCH עם הודעת שגיאה )התהליך קיים אבל אין לנו הרשאה לשלוח לו סיגנל כזה( או מצליחה )אם יש לנו הרשאה לשלוח סיגנל כזה(, אז אנחנו יודעים שהתהליך קיים.  . כדי לקבל הודעות שגיאה כאלה include errno.h צריך להוסיף
- 
-מה עליכם לבצע:  :  והפלט של התכנית הוא pid המקבלת פרמטר יחיד ​ check_pid.c ( כתבו תכנית בשם 0 If EPERM, Process <pid> ​exists but we have no permission.  If ESRCH, Process <pid>  does not exist. If kill is successful, Process <pid> exists. 
- Running example​: check_pid 2003 Process 2003 exists. 
- 
-(ם 1  השיטות הנ"ל. כתבו את תשובתכ 3  שיטות נוספות לבדיקה הנ"ל. פרטו יתרונות וחסרונות של 2 הציעו q21_<your_id>.pdf  נפרד בשם pdf בקובץ
- 
-מה עליכם להגיש: check_pid.c​, ​makefile​ to compile, ​README​ how to run, and  ​q21_<your_id>.pdf 
-  :​ חשוב אם אחד הקבצים חסר, הציון יהיה אפס על כל השאלה. 
- 
-(ם 2 בחלק זה תראו שמספר הסיגנלים המתקבלים יכול להיות קטן ממספר הסיגנלים שנשלחים. במילי -ה​ .client.c ,server.c  תכניות 2 אחרות, סיגנלים אינם נכנסים לתור. על מנת להראות זאת, כתבו .SIGINT,SIGUSR1 : סוגים של סיגנלים 2  יכול לשלוח client . שמתקבלים SIGINT  סופר את מספר הסיגנלים SIGINT  של handler - ה server- בתוך ה .server- שהגיעו ל SIGINT    מדפיס את מספר הסיגנלים SIGUSR1  של handler- ה , מספר סיגנל server- של ה ​ pid : פרמטרים בסדר הבא 3  מקבל client - ה                                                                                    SIGINT(2)  או SIGUSR1(10) ומספר הסיגנלים שישלחו. לדוגמא:  1) client <server pid>  2 1000   2) client <server pid>  10 1 
- 
- .<server pid> ​ לשרת עם ​  SIGINTסיגנלים ​ 1000 ​ ישלח client בדוגמה הראשונה  .​ שהתקבלו ​ SIGINT ​- ידפיס את מספר ה ​ <server pid> ​ בדוגמה השניה השרת עם
- 
-מה עליכם לבצע:  . המבצעות את מה שהוסבר server.c  ואת client.c ( כתבו את התכניות 0      (1. עליכם להראות שלא כל הסיגנלים מתקבלים (ת 2 (. הסבירו את היתרונו sigqueue​, ​sigaction​, etc)  שנצברים לתור real time signals למדו על .q22_<your_id>.pdf והחסרונות של שתי השיטות. הוסיפו את ההסברים לקובץ
- 
-מה עליכם להגיש: client.c​, ​server.c​, ​makefile​ how to compile, ​README​ how to run, and  ​q22_<your_id>.pdf​. 
-  :​ חשוב אם אחד הקבצים חסר, הציון יהיה אפס על כל השאלה. 
- 
- :(zoom) " מה צריך לדעת לקראת הבחינה "הפרונטאלית .pipe, mkfifo, shared memory  שלמדתם בקורס כמו IPC - עליכם לדעת טוב את סוגי שיטות ה man - , אבל אתם צריכים לדעת לחפש אותם ב API - יש לדעת איך הם ממומשים. אינכם צריכים לזכור את כל ה ולהסביר איך הם פועלים. 
- 
- 
- CPU scheduling :(' נק 25) 3 שאלה .Linux - ב CPU בשאלה זו תתנסו בתזמון של
- 
-מה עליכם לבצע: 
- 
-(י 1 נועד לניהול פרמטר ​ chrt , . לדוגמא Linux -ב​ chrt, renice, taskset  עליכם ללמוד על הפקודות , או מריצה pid זמן-אמת של התהליך. פקודה זו מחזירה או משנה את ערכי פרמטרי זמן-אמת של תהליך .(​ כאן ​  או כל מקור אחר )למשל man - פקודה עם פרמטרים מסויימים. לצורך הלימוד תוכלו להשתמש ב  renice -ו​ chrt למדו איך אפשר לשנות את מדיניות התזמון והעדיפויות של תהליך. מה ההבדל בין : כמו כן עליכם להבין לפחות את מנגנוני התזמון הבאים ​ ? taskset מה עושה ​ ? CPU בתזמון .SCHED_DEADLINE, SCHED_FIFO, SCHED_IDLE, SCHED_RR, SCHED_OTHER 
- 
-(ת 2 שמגדירה מדיניו ​ set_policy.c  עליכם לכתוב תכנית בשם 1 לאחר שהבנתם את הנדרש בסעיף ​   משנה גם את מדיניות התזמון sched_setscheduler()​ system call . תזמון וקדימויות של תהליך . , הפרמטרים של התהליך הקורא משתנים pid=0 . אם pid ואת הקדימויות של תהליך  SCHED_DEADLINE,  פרמטרים: מספר המייצג את אחת מהמדינויות )למשל 2  מקבל Set_policy  המייצג integer ומספר ​ (SCHED_FIFO, SCHED_IDLE, SCHED_RR, SCHED_OTHER עדיפות. 
- 
-מה עליכם להגיש:  ​set_policy.c​, ​makefile​ to compile, ​README​ how to run, and  ​q32_<your_id>.pdf​ containing output of commands confirming changed values.  :​ חשוב אם אחד הקבצים חסר, הציון יהיה אפס על כל השאלה. 
+Question 2.1: How to check if a pocess exists in a c program.
+  - c file that shows the program it self using the function kill(pid,0).
+  - pdf expleaing 2 other options we could use and the advantages or disadvantages of that option.
 
-  :(zoom) " מה צריך לדעת לקראת הבחינה "הפרונטאלית 1  עובד. עליכם להבין לפחות את כל מה שהוזכר בסעיף Linux - ב CPU - עליכם להבין איך תזמון ה
- 
- files in Linux :(' נק 25) 4 שאלה .Linux - שלהם ב metadata - בשאלה זו תעסקו בקבצים וה
- 
-(1: עליכם להבין את המושגים השונים בהקשר של מערכת הקבצים כגון .file descriptors, inods, directories,soft and hard links in Linux    .stat - של קובץ אפשר להשתמש ב metadata כדי לבדוק .3  כמו כן, עליכם להבין בכל הנושאים שעסקתם בהם במטלה
- 
-(ע 2 )(, המאפשרת לסרוק ספריה שלמה באופן רקורסיבי תוך ביצו nftw  בחלק זה תשתמשו בפונקציה מספר פעולות )כגון קריאה לפונקציות המוגדרות ע"י המשתמש( לכל קובץ בעץ הקבצים. עליכם לכתוב  שעוברת באופן רקורסיבי על ספריה נתונה. על כל קובץ או ספריה ​ dir_traversal.c תוכנית בשם , יש soft link  ושם. אם הספריה מכילה inode התוכנית מדפיסה : סוג )לפי הדוגמא שבהמשך(, מספר להתעלם ממנו. 
- 
-Example:  
- 
-$ mkdir dir $ touch dir/a dir/b $ ln -s a dir/sl                                      ←- ​later​ ​ignored from the output $ mkdir dir/sub $ touch dir/sub/x 
- 
-$ ./dir_traversal dir D 2327983 dir F 2327984 a F 2327985 b D 2327988 sub F 2327989 x 
-מה עליכם להגיש: dir_traversal.c​, ​makefile​ to compile, ​README​ how to run, and  ​q41_<your_id>.pdf containing the running output for the specified example.  :​ חשוב אם אחד הקבצים חסר, הציון יהיה אפס על כל השאלה. 
- 
- :(zoom) " מה צריך לדעת לקראת הבחינה "הפרונטאלית - ואיך מתפעלים אותו. במיוחד עליכם להבין את כל מה שעסקתם בו ב Linux - עליכם להבין את מנגנון הקבצים ב . של שאלה זו 1 סעיף
+Question 2.2: Created server and client C program that will show that not all standerd signals will arive at the server.
+  - Readme will explain how to run and compile.
+  - 2 C programs called client and server.
+  - pdf showing a screanshot of the output.
+  
+Question 3:
+
+Question 4: Using the fundtion nftw() so we can scan a library recusivaly.
+  - There is a C program called dir_traversal that will print the files of the folder that we want to check and       will ignore any soft link. 
+  - The pdf shows the output of the example: 
+    $ mkdir dir
+    $ touch die/a dir/b
+    $ ln -s a dir/sl
+    $ mkdir dir/sub
+    $ touch dir/sub/x

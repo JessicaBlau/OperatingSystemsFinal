@@ -6,6 +6,10 @@
 
 int main(int argc, char* argv[])
 {
+    if(argc != 2){
+        printf("please enter pid\n");
+        return 0;
+    }
     if (kill(atoi(argv[1]), 0) == -1){
         if(errno == EPERM){
             printf ("Process %s exists but we have no permission\n", argv[1]);

@@ -1,5 +1,3 @@
-#Question 2.1
-
 In this program we have the C file check_pid. First you need to compile this program with 
 the makefile by using the command make and after you will have the compiled file check_pid.
 Once its compiled run it with the pid you want to check and it will return if the pid you are 
